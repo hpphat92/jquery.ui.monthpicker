@@ -292,7 +292,7 @@
 				isFixed |= $(this).css('position') == 'fixed';
 				return !isFixed;
 			});
-			if (isFixed && $.browser.opera) { // correction for Opera when fixed and scrolled
+			if (isFixed && $.browser && $.browser.opera) { // correction for Opera when fixed and scrolled
 				$.monthpicker._pos[0] -= document.documentElement.scrollLeft;
 				$.monthpicker._pos[1] -= document.documentElement.scrollTop;
 			}
